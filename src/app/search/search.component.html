@@ -1,0 +1,22 @@
+<h1>
+  search works!
+</h1>
+<h3>
+  TODO: connection test and error handle
+</h3>
+<li>now: only right input value</li>
+<li>future: can handle wrong input</li>
+<p></p>
+
+<input #stock (keyup)='0'>
+<p>{{stock.value}}</p>
+<button (click)="getResult(stock.value)">get result</button>
+<h3>1. result close price </h3>
+<p>{{result.close.price}}</p>
+<h3>2. test pushed stock</h3>
+{{pushStock.cmp}}
+<h3>3. test history in seasrch page</h3>
+
+<ul>
+    <li *ngFor="let stock of stocks">{{stock.cmp | uppercase}}</li>
+</ul>
